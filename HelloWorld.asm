@@ -1,3 +1,4 @@
+	processor 6502
 ; ============================================================
 ; HELLO WORLD for Atari 400/800/XL/XE
 ; 6502 Assembly — uses the Atari OS CIO (Central I/O) system
@@ -59,6 +60,7 @@ MODE_W    = 8                   ; Screen output only
 ; X      = 0    (channel 0 * 16 = offset into IOCB table)
 
 START:
+
         ; Close first, in case channel was left open
         LDX     #0              ; X = channel 0 * 16 = 0
         LDA     #CMD_CLOSE
